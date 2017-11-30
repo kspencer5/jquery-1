@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>jQuery UI Draggable - Default functionality</title>
+    
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <link rel="stylesheet" href="/resources/demos/style.css">
+    
+      
+    
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <style type="text/css">
+        #containment-wrapper {
+            width: 95%; 
+            height:150px;
+            border:2px solid #ccc;
+            padding: 10px;
+        }
+        
+        #draggable {
+            width: 175px;
+        }
+        
+        #resizable {
+            width: 150px;
+            height: 150px;
+            padding: 0.5em;
+        }
+    
+    </style>
+    
+     
+    
+</head>
+
+<body>
+
+    <div id="containment-wrapper">
+        <div id="draggable" class="draggable ui-widget-content">
+          Drag me around
+        </div>
+    </div>
+    
+    <div id="resizable" class="ui-widget-content">
+          <h3 class="ui-widget-header">Resizable</h3>
+    </div>
+    
+<script>
+    
+      $( function() {
+        $( "#draggable" ).draggable({ containment: "#containment-wrapper", scroll: false });
+          
+      } );
+    
+      $(function() {
+          
+          $("#resizable").resizable();
+          
+      });  
+    
+    
+</script>
+
+
+</body>
+
+</html>
