@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AJAX</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <style>
+            
+        
+        
+        </style>
+        
+    </head>
+
+    <body>
+        
+        <p class="text"></p>
+        
+    
+    
+    <script type="text/javascript">
+        
+        $.ajax("info.txt").done(function(data) {
+            
+            $("p").html(data);
+            
+        }).fail(function() {
+            alert("could not get data");
+            
+        });        
+        
+        
+        
+        
+        
+        
+//       $("#toggle").click(function() {
+//           
+//           if($("#text").css("display") == "none") {
+//               
+//               $("#text").fadeIn();
+//               
+//           } else {
+//               
+//               $("#text").fadeOut();
+//               
+//           }
+//           
+//       });
+            
+        
+        
+        
+    </script>
+    
+    </body>
+
+
+</html>
